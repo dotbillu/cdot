@@ -1,4 +1,3 @@
-#include<iostream>
-int main(){
-std::cout<<"hi";
-  }
+#include "inputParse.h"
+#include <iostream>
+int main() { printhello(); }
