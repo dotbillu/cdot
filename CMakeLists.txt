@@ -8,4 +8,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(dotc 
     src/main.cpp 
     src/inputParser.cpp
+    src/execute.cpp
   )

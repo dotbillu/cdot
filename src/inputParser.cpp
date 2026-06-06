@@ -1,5 +1,4 @@
 #include "inputParser.h"
-#include <sstream>
 
 std::vector<std::string> parser(std::string s) {
   std::stringstream ss(s);
