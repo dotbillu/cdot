@@ -5,8 +5,8 @@ project(dotc LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(dotc 
-    src/main.cpp 
-    src/inputParser.cpp
-    src/execute.cpp
-  )
+file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
+    src/*.cpp
+)
+
+add_executable(dotc ${SOURCES})
