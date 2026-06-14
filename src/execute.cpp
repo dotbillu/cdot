@@ -1,10 +1,13 @@
+#include "commands/runExternal.h"
 #include "execute.h"
 #include "registry.h"
-#include <string>
-#include <vector>
 
 void execute(std::vector<std::string> input) {
   if (input.size()) {
-    commands[input[0]](input);
+    if (commands.count(input[0])) {
+      commands[input[0]](input);
+    } else {
+      runExternal(input);
+    }
   }
 }
